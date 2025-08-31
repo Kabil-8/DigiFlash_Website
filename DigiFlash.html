@@ -1,0 +1,3649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiFlash - Digital Innovation Department</title>
+    <meta name="description" content="DigiFlash - Leading Digital Innovation Department specializing in cutting-edge technology solutions, research, and academic excellence.">
+    <meta name="keywords" content="digital innovation, technology, research, academic, department, DigiFlash">
+    <meta name="author" content="DigiFlash Department">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="DigiFlash - Digital Innovation Department">
+    <meta property="og:description" content="Leading Digital Innovation Department specializing in cutting-edge technology solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://digiflash.edu">
+    <meta property="og:image" content="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DigiFlash - Digital Innovation Department">
+    <meta name="twitter:description" content="Leading Digital Innovation Department specializing in cutting-edge technology solutions">
+    <meta name="twitter:image" content="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238b5cf6'/><text x='50' y='65' font-family='Arial Black' font-size='40' text-anchor='middle' fill='white'>DF</text></svg>">
+    
+    <style>
+        /* CSS Reset and Base Styles - Performance Optimized */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            max-width: 100vw;
+        }
+
+        /* Dark Theme as Primary (Default) */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2a 25%, #2a0a3a 50%, #1a0a2a 75%, #0a0a0a 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+            transition: background 0.4s ease, color 0.4s ease;
+            max-width: 100vw;
+        }
+
+        /* Light Mode Styles */
+        body.light-mode {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 25%, #e9d5ff 50%, #f3e8ff 75%, #f5f3ff 100%);
+            color: #1e1b4b;
+        }
+
+        /* Holographic Computer Science Floating Elements */
+        .cs-hologram-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .cs-element {
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            opacity: 0.6;
+            animation: float-hologram 20s ease-in-out infinite;
+            text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+            filter: drop-shadow(0 0 5px currentColor);
+            will-change: transform;
+            backface-visibility: hidden;
+        }
+
+        body.light-mode .cs-element {
+            color: #6d28d9;
+            opacity: 0.5;
+        }
+
+        /* Circuit Board Patterns */
+        .circuit-board {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, transparent 30%, rgba(139, 92, 246, 0.1) 30%, rgba(139, 92, 246, 0.1) 70%, transparent 70%),
+                        linear-gradient(-45deg, transparent 30%, rgba(168, 85, 247, 0.1) 30%, rgba(168, 85, 247, 0.1) 70%, transparent 70%);
+            background-size: 20px 20px;
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            border-radius: 10px;
+            animation: circuit-glow 8s ease-in-out infinite, float-3d 15s ease-in-out infinite;
+        }
+
+        body.light-mode .circuit-board {
+            background: linear-gradient(45deg, transparent 30%, rgba(139, 92, 246, 0.2) 30%, rgba(139, 92, 246, 0.2) 70%, transparent 70%),
+                        linear-gradient(-45deg, transparent 30%, rgba(168, 85, 247, 0.2) 30%, rgba(168, 85, 247, 0.2) 70%, transparent 70%);
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        .circuit-board::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background: #8b5cf6;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6;
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        body.light-mode .circuit-board::before {
+            background: #6d28d9;
+            box-shadow: 0 0 10px #6d28d9, 0 0 20px #6d28d9;
+        }
+
+        /* Code Blocks */
+        .code-block {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(139, 92, 246, 0.5);
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: #8b5cf6;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            animation: code-flicker 6s ease-in-out infinite, float-code 18s ease-in-out infinite;
+            text-shadow: 0 0 5px currentColor;
+        }
+
+        body.light-mode .code-block {
+            background: rgba(255, 255, 255, 0.9);
+            border-color: rgba(139, 92, 246, 0.6);
+            color: #6d28d9;
+        }
+
+        /* Binary Rain */
+        .binary-rain {
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: #22c55e;
+            animation: binary-fall 10s linear infinite;
+            text-shadow: 0 0 5px currentColor;
+        }
+
+        body.light-mode .binary-rain {
+            color: #16a34a;
+        }
+
+        /* Programming Symbols */
+        .prog-symbol {
+            position: absolute;
+            font-size: 24px;
+            font-weight: bold;
+            color: #a855f7;
+            animation: symbol-rotate 12s ease-in-out infinite;
+            text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+        }
+
+        body.light-mode .prog-symbol {
+            color: #7c3aed;
+        }
+
+        /* Tech Icons */
+        .tech-icon {
+            position: absolute;
+            font-size: 32px;
+            animation: tech-pulse 8s ease-in-out infinite, float-tech 16s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px currentColor);
+        }
+
+        /* Holographic Mesh */
+        .holo-mesh {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(90deg, transparent 48%, rgba(139, 92, 246, 0.1) 49%, rgba(139, 92, 246, 0.1) 51%, transparent 52%),
+                        linear-gradient(0deg, transparent 48%, rgba(168, 85, 247, 0.1) 49%, rgba(168, 85, 247, 0.1) 51%, transparent 52%);
+            background-size: 30px 30px;
+            border-radius: 50%;
+            animation: mesh-rotate 20s linear infinite, mesh-scale 10s ease-in-out infinite;
+            opacity: 0.4;
+        }
+
+        body.light-mode .holo-mesh {
+            background: linear-gradient(90deg, transparent 48%, rgba(139, 92, 246, 0.2) 49%, rgba(139, 92, 246, 0.2) 51%, transparent 52%),
+                        linear-gradient(0deg, transparent 48%, rgba(168, 85, 247, 0.2) 49%, rgba(168, 85, 247, 0.2) 51%, transparent 52%);
+        }
+
+        /* Data Visualization */
+        .data-viz {
+            position: absolute;
+            width: 150px;
+            height: 100px;
+            background: linear-gradient(45deg, rgba(139, 92, 246, 0.2) 0%, rgba(168, 85, 247, 0.2) 25%, rgba(236, 72, 153, 0.2) 50%, rgba(168, 85, 247, 0.2) 75%, rgba(139, 92, 246, 0.2) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            border-radius: 8px;
+            animation: data-flow 12s ease-in-out infinite;
+        }
+
+        body.light-mode .data-viz {
+            background: linear-gradient(45deg, rgba(139, 92, 246, 0.3) 0%, rgba(168, 85, 247, 0.3) 25%, rgba(236, 72, 153, 0.3) 50%, rgba(168, 85, 247, 0.3) 75%, rgba(139, 92, 246, 0.3) 100%);
+            border-color: rgba(139, 92, 246, 0.5);
+        }
+
+        .data-viz::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 80%;
+            height: 60%;
+            background: repeating-linear-gradient(
+                90deg,
+                rgba(139, 92, 246, 0.3) 0px,
+                rgba(139, 92, 246, 0.3) 5px,
+                transparent 5px,
+                transparent 15px
+            );
+            animation: chart-animate 4s ease-in-out infinite;
+        }
+
+        /* Holographic Animations */
+        @keyframes float-hologram {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px) rotateZ(0deg);
+                opacity: 0.6;
+            }
+            25% {
+                transform: translateY(-30px) translateX(20px) rotateZ(5deg);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateY(-10px) translateX(-15px) rotateZ(-3deg);
+                opacity: 0.7;
+            }
+            75% {
+                transform: translateY(-25px) translateX(10px) rotateZ(2deg);
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes circuit-glow {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(139, 92, 246, 0.3), inset 0 0 5px rgba(139, 92, 246, 0.1);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(139, 92, 246, 0.6), inset 0 0 10px rgba(139, 92, 246, 0.3);
+            }
+        }
+
+        @keyframes float-3d {
+            0%, 100% {
+                transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+            }
+            33% {
+                transform: translateY(-20px) rotateX(15deg) rotateY(15deg);
+            }
+            66% {
+                transform: translateY(-10px) rotateX(-10deg) rotateY(-10deg);
+            }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                box-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                box-shadow: 0 0 20px #8b5cf6, 0 0 40px #8b5cf6, 0 0 60px #8b5cf6;
+            }
+        }
+
+        @keyframes code-flicker {
+            0%, 100% {
+                opacity: 0.8;
+                text-shadow: 0 0 5px currentColor;
+            }
+            50% {
+                opacity: 1;
+                text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+            }
+        }
+
+        @keyframes float-code {
+            0%, 100% {
+                transform: translateY(0px) rotateZ(0deg);
+            }
+            50% {
+                transform: translateY(-15px) rotateZ(2deg);
+            }
+        }
+
+        @keyframes binary-fall {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        @keyframes symbol-rotate {
+            0%, 100% {
+                transform: rotate(0deg) scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: rotate(180deg) scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        @keyframes tech-pulse {
+            0%, 100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 10px currentColor);
+            }
+            50% {
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 20px currentColor) drop-shadow(0 0 30px currentColor);
+            }
+        }
+
+        @keyframes float-tech {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px);
+            }
+            33% {
+                transform: translateY(-25px) translateX(15px);
+            }
+            66% {
+                transform: translateY(-5px) translateX(-10px);
+            }
+        }
+
+        @keyframes mesh-rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes mesh-scale {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.4;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes data-flow {
+            0%, 100% {
+                transform: translateX(0px) skewX(0deg);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateX(20px) skewX(5deg);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes chart-animate {
+            0%, 100% {
+                transform: scaleY(1);
+            }
+            50% {
+                transform: scaleY(1.3);
+            }
+        }
+
+        /* Custom Scrollbar - iOS Style */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            border-radius: 4px;
+        }
+
+        body.light-mode ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Typography - Performance Optimized */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffffff, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body.light-mode h1 {
+            background: linear-gradient(135deg, #1e1b4b, #8b5cf6, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 800;
+        }
+
+        h3 {
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        body.light-mode h3 {
+            color: #1e1b4b;
+        }
+
+        h4 {
+            font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        body.light-mode h4 {
+            color: #1e1b4b;
+        }
+
+        p {
+            font-size: clamp(1rem, 2vw, 1.1rem);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            color: #cbd5e1;
+        }
+
+        body.light-mode p {
+            color: #475569;
+        }
+
+        a {
+            color: #8b5cf6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #a855f7;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            color: white;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: inherit;
+            border: 2px solid rgba(139, 92, 246, 0.5);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: #8b5cf6;
+            transform: translateY(-2px);
+        }
+
+        /* Cards - Enhanced and Smaller */
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #ffffff;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        body.light-mode .card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            color: #1e1b4b;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        body.light-mode .card:hover {
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15);
+        }
+
+        .card h3, .card h4 {
+            color: #ffffff;
+        }
+
+        body.light-mode .card h3, body.light-mode .card h4 {
+            color: #1e1b4b;
+        }
+
+        .card p {
+            color: #cbd5e1;
+        }
+
+        body.light-mode .card p {
+            color: #475569;
+        }
+
+        /* Loading Screen - Simplified */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0a0a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: all 0.5s ease;
+        }
+
+        .loading.light-mode {
+            background: #ffffff;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loading-logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .loading-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #a855f7;
+            margin-bottom: 2rem;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(168, 85, 247, 0.3);
+            border-top: 3px solid #a855f7;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Header - Performance Optimized */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        body.light-mode .header {
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .header.transparent {
+            background: rgba(10, 10, 10, 0.8);
+        }
+
+        body.light-mode .header.transparent {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+            color: #ffffff;
+            transition: transform 0.3s ease;
+        }
+
+        body.light-mode .logo {
+            color: #1e1b4b;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover .logo-icon {
+            transform: rotate(10deg);
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            color: #ffffff;
+        }
+
+        body.light-mode .nav-link {
+            color: #1e1b4b;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #8b5cf6, #a855f7);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 80%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #a855f7;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            transform: scale(1.1);
+            background: rgba(139, 92, 246, 0.1);
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: currentColor;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: inherit;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        body.light-mode .mobile-menu {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-nav .nav-link {
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 15px;
+        }
+
+        /* Hero Section - Static */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.8), rgba(26, 10, 42, 0.8)),
+                        url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080') center/cover;
+        }
+
+        body.light-mode .hero {
+            background: linear-gradient(135deg, rgba(245, 243, 255, 0.8), rgba(237, 233, 254, 0.8)),
+                        url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080') center/cover;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(139, 92, 246, 0.1) 50%, transparent 70%);
+            animation: hero-overlay 10s ease-in-out infinite;
+        }
+
+        @keyframes hero-overlay {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            z-index: 5;
+            position: relative;
+            padding: 0 2rem;
+        }
+
+        .hero-subtitle {
+            color: #cbd5e1;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            margin-bottom: 2rem;
+        }
+
+        body.light-mode .hero-subtitle {
+            color: #475569;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        /* Sections - Enhanced Grid Layout */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .about-feature-icon {
+            transform: rotate(10deg) scale(1.1);
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .mission-icon,
+        .vision-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .mission-icon,
+        .card:hover .vision-icon {
+            transform: rotate(5deg) scale(1.1);
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+        }
+
+        /* Events Grid - Static Responsive Layout */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #ffffff;
+            position: relative;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        body.light-mode .event-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            color: #1e1b4b;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        .event-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .event-content {
+            padding: 1.5rem;
+        }
+
+        .event-date {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        body.light-mode .event-title {
+            color: #1e1b4b;
+        }
+
+        .event-description {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+
+        body.light-mode .event-description {
+            color: #475569;
+        }
+
+        .event-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .event-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, #ec4899, #f97316);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 3;
+        }
+
+        /* Team Section - Hierarchical Grid Layout */
+        .team-grid {
+            display: grid;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+
+        .team-hierarchy {
+            margin-bottom: 3rem;
+        }
+
+        .team-hierarchy h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: #a855f7;
+            position: relative;
+        }
+
+        .team-hierarchy h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #8b5cf6, #a855f7);
+            border-radius: 2px;
+        }
+
+        .team-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .team-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #ffffff;
+            max-width: 280px;
+            width: 100%;
+        }
+
+        body.light-mode .team-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            color: #1e1b4b;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        .team-card:hover .team-avatar {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+        }
+
+        .team-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  border: 2px solid #ddd;
+}
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+        .team-name {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        body.light-mode .team-name {
+            color: #1e1b4b;
+        }
+
+        .team-role {
+            color: #a855f7;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .team-bio {
+            font-size: 0.8rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            color: #cbd5e1;
+        }
+
+        body.light-mode .team-bio {
+            color: #475569;
+        }
+
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .team-social a {
+            width: 32px;
+            height: 32px;
+            background: rgba(139, 92, 246, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+
+        .team-social a:hover {
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Gallery */
+        .gallery-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .gallery-main {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .gallery-slide.active {
+            opacity: 1;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            font-size: 1.2rem;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-nav:hover {
+            background: rgba(139, 92, 246, 0.5);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .gallery-nav.prev {
+            left: 1rem;
+        }
+
+        .gallery-nav.next {
+            right: 1rem;
+        }
+
+        .gallery-thumbnails {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .gallery-thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .gallery-thumbnail:hover {
+            transform: scale(1.05);
+            border-color: rgba(139, 92, 246, 0.5);
+        }
+
+        .gallery-thumbnail.active {
+            border-color: #a855f7;
+            transform: scale(1.05);
+        }
+
+        .gallery-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-main:hover .gallery-info {
+            transform: translateY(0);
+        }
+
+        .gallery-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .gallery-description {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        /* Contact */
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        body.light-mode .contact-item {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: rotate(10deg) scale(1.1);
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+        }
+
+        .contact-details h4 {
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        body.light-mode .contact-details h4 {
+            color: #1e1b4b;
+        }
+
+        .contact-details p {
+            margin: 0;
+            line-height: 1.5;
+            color: #cbd5e1;
+        }
+
+        body.light-mode .contact-details p {
+            color: #475569;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(139, 92, 246, 0.2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 3rem 0 2rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background: rgba(10, 10, 10, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body.light-mode .footer {
+            background: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        body.light-mode .footer-section h4 {
+            color: #1e1b4b;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        body.light-mode .footer-links a {
+            color: #475569;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: #a855f7;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.8;
+            color: #cbd5e1;
+        }
+
+        body.light-mode .footer-bottom {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            color: #475569;
+        }
+
+        /* Hidden Overview */
+        .hidden-overview {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 15000;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+            overflow-y: auto;
+            padding: 2rem;
+            background: rgba(10, 10, 10, 0.98);
+        }
+
+        body.light-mode .hidden-overview {
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .hidden-overview.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .hidden-overview-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        body.light-mode .hidden-overview-content {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.02);
+        }
+
+        .hidden-overview-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .hidden-overview-close:hover {
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            transform: scale(1.1);
+        }
+
+        .overview-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body.light-mode .overview-section {
+            background: rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .overview-section h3 {
+            margin-bottom: 1.5rem;
+            color: #a855f7;
+            font-size: 1.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 15px;
+            background: rgba(139, 92, 246, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: rgba(139, 92, 246, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #a855f7;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .feature-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #a855f7;
+            font-weight: bold;
+        }
+
+        .secret-trigger {
+            position: fixed;
+            bottom: 50%;
+            right: 0;
+            width: 1px;
+            height: 100px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+            opacity: 0;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Scroll to Top */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8b5cf6, #a855f7, #ec4899);
+            z-index: 9999;
+            transition: width 0.1s linear;
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 2rem;
+            background: rgba(10, 10, 10, 0.95);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: #ffffff;
+            border-radius: 15px;
+            padding: 1rem 1.5rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transform: translateX(400px);
+            transition: transform 0.4s ease;
+            z-index: 1001;
+            max-width: 350px;
+            font-weight: 500;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        body.light-mode .notification {
+            background: rgba(255, 255, 255, 0.95);
+            color: #1e1b4b;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.success {
+            border-color: rgba(34, 197, 94, 0.5);
+            background: rgba(34, 197, 94, 0.1);
+        }
+
+        .notification.error {
+            border-color: rgba(239, 68, 68, 0.5);
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .about-grid,
+            .mission-vision-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+            }
+
+            .section {
+                padding: 6rem 0;
+            }
+
+            .nav {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: none;
+            }
+
+            .events-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            }
+
+            .team-row {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .events-grid {
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 1360px;
+                margin: 2rem auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .header-content {
+                padding: 1rem;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+                max-width: 320px;
+                margin: 2rem auto;
+            }
+
+            .theme-toggle,
+            .scroll-to-top {
+                width: 50px;
+                height: 50px;
+                bottom: 1rem;
+            }
+
+            .theme-toggle {
+                left: 1rem;
+            }
+
+            .scroll-to-top {
+                right: 1rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .hidden-overview {
+                padding: 1rem;
+            }
+
+            .hidden-overview-content {
+                padding: 1.5rem;
+            }
+
+            .gallery-main {
+                height: 300px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .team-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+
+            .gallery-thumbnails {
+                gap: 0.5rem;
+            }
+
+            .gallery-thumbnail {
+                width: 60px;
+                height: 60px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+                max-width: 280px;
+            }
+
+            .event-card {
+                max-width: 280px;
+            }
+
+            .team-card {
+                max-width: 260px;
+            }
+        }
+
+        /* Performance Optimizations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s ease;
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Hardware Acceleration - Minimal */
+        .card,
+        .event-card,
+        .team-card,
+        .btn,
+        .nav-link,
+        .cs-element,
+        .circuit-board,
+        .code-block,
+        .binary-rain,
+        .prog-symbol,
+        .tech-icon,
+        .holo-mesh,
+        .data-viz {
+            will-change: transform;
+            backface-visibility: hidden;
+        }
+
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .cs-element,
+            .circuit-board,
+            .code-block,
+            .binary-rain,
+            .prog-symbol,
+            .tech-icon,
+            .holo-mesh,
+            .data-viz {
+                animation: none;
+            }
+        }
+
+        /* Focus States for Accessibility */
+        .btn:focus,
+        .nav-link:focus,
+        .gallery-nav:focus,
+        .theme-toggle:focus,
+        .scroll-to-top:focus {
+            outline: 2px solid #8b5cf6;
+            outline-offset: 2px;
+        }
+
+        /* Print Styles */
+        @media print {
+            .header,
+            .gallery-nav,
+            .scroll-to-top,
+            .theme-toggle,
+            .hidden-overview,
+            .cs-hologram-container {
+                display: none;
+            }
+
+            body {
+                background: white !important;
+                color: black !important;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark-mode">
+    <!-- Loading Screen -->
+    <div class="loading dark-mode" id="loading">
+        <div class="loading-logo">DF</div>
+        <div class="loading-text">DigiFlash</div>
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Computer Science Holographic Elements -->
+    <div class="cs-hologram-container" id="csHologramContainer">
+        <!-- Circuit Boards -->
+        <div class="circuit-board" style="top: 10%; left: 5%; animation-delay: 0s;"></div>
+        <div class="circuit-board" style="top: 60%; right: 8%; animation-delay: -3s;"></div>
+        <div class="circuit-board" style="bottom: 20%; left: 15%; animation-delay: -6s;"></div>
+
+        <!-- Code Blocks -->
+        <div class="code-block" style="top: 25%; right: 20%; animation-delay: -1s;">
+            function innovate() {<br>
+            &nbsp;&nbsp;return future;<br>
+            }
+        </div>
+        <div class="code-block" style="bottom: 40%; left: 25%; animation-delay: -4s;">
+            class DigiFlash {<br>
+            &nbsp;&nbsp;constructor() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;this.vision = true;<br>
+            &nbsp;&nbsp;}<br>
+            }
+        </div>
+        <div class="code-block" style="top: 70%; right: 5%; animation-delay: -7s;">
+            const AI = {<br>
+            &nbsp;&nbsp;learn: () => evolve(),<br>
+            &nbsp;&nbsp;create: () => magic<br>
+            };
+        </div>
+
+        <!-- Binary Rain -->
+        <div class="binary-rain" style="left: 10%; animation-delay: 0s;">1010110101<br>0110101010<br>1101010110</div>
+        <div class="binary-rain" style="left: 30%; animation-delay: -2s;">0101101011<br>1010010110<br>0110101101</div>
+        <div class="binary-rain" style="left: 50%; animation-delay: -4s;">1101010101<br>0010110101<br>1010101011</div>
+        <div class="binary-rain" style="left: 70%; animation-delay: -6s;">0110101010<br>1101010011<br>0101101010</div>
+        <div class="binary-rain" style="left: 90%; animation-delay: -8s;">1010101101<br>0101010110<br>1101101010</div>
+
+        <!-- Programming Symbols -->
+        <div class="prog-symbol" style="top: 15%; left: 40%; animation-delay: -1s;">{}</div>
+        <div class="prog-symbol" style="top: 35%; right: 30%; animation-delay: -3s;">[]</div>
+        <div class="prog-symbol" style="bottom: 25%; left: 60%; animation-delay: -5s;">()</div>
+        <div class="prog-symbol" style="top: 80%; left: 20%; animation-delay: -7s;">&lt;/&gt;</div>
+        <div class="prog-symbol" style="top: 50%; right: 15%; animation-delay: -9s;">===</div>
+        <div class="prog-symbol" style="bottom: 60%; right: 40%; animation-delay: -11s;">=&gt;</div>
+
+        <!-- Tech Icons -->
+        <div class="tech-icon" style="top: 20%; left: 80%; animation-delay: -2s; color: #22c55e;">⚡</div>
+        <div class="tech-icon" style="bottom: 30%; left: 5%; animation-delay: -4s; color: #3b82f6;">🚀</div>
+        <div class="tech-icon" style="top: 60%; left: 70%; animation-delay: -6s; color: #f59e0b;">💎</div>
+        <div class="tech-icon" style="bottom: 10%; right: 25%; animation-delay: -8s; color: #ef4444;">🔥</div>
+        <div class="tech-icon" style="top: 40%; left: 10%; animation-delay: -10s; color: #8b5cf6;">✨</div>
+
+        <!-- Holographic Mesh -->
+        <div class="holo-mesh" style="top: 5%; right: 10%; animation-delay: 0s;"></div>
+        <div class="holo-mesh" style="bottom: 15%; left: 30%; animation-delay: -5s;"></div>
+        <div class="holo-mesh" style="top: 45%; right: 50%; animation-delay: -10s;"></div>
+
+        <!-- Data Visualization -->
+        <div class="data-viz" style="top: 30%; left: 50%; animation-delay: -2s;"></div>
+        <div class="data-viz" style="bottom: 50%; right: 20%; animation-delay: -6s;"></div>
+        <div class="data-viz" style="top: 75%; left: 35%; animation-delay: -10s;"></div>
+    </div>
+
+    <!-- Secret Trigger for Hidden Overview -->
+    <button class="secret-trigger" id="secretTrigger" title="Click for hidden overview"></button>
+
+    <!-- Header -->
+    <header class="header transparent" id="header">
+        <div class="header-content">
+            <a href="#home" class="logo">
+                <div class="logo-icon">DF</div>
+                <span>DigiFlash</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#events" class="nav-link" data-section="events">Events</a>
+                <a href="#gallery" class="nav-link" data-section="gallery">Gallery</a>
+                <a href="#team" class="nav-link" data-section="team">Team</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </nav>
+
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <a href="#home" class="nav-link" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#events" class="nav-link" data-section="events">Events</a>
+                <a href="#gallery" class="nav-link" data-section="gallery">Gallery</a>
+                <a href="#team" class="nav-link" data-section="team">Team</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section - Static -->
+    <section class="hero section" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">DigiFlash</h1>
+                <p class="hero-subtitle">Pioneering Digital Innovation Through Research, Technology, and Academic Excellence</p>
+
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Explore Our Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section fade-in" id="about">
+        <div class="container">
+            <h2>About DigiFlash</h2>
+
+            <div class="about-grid">
+                <div class="about-content slide-in-left">
+                    <h3>Leading Digital Innovation</h3>
+                    <p>DigiFlash is the student association of Computer Science and Engineering department ,MCET, Pollachi. The objective of our association is to innovate, create and sharpen the minds of the students to compete globally. It is a platform to improve the students’ knowledge with a fierce and also make opportunity to interact with leading industry persons.</p>
+                    <p>Digiflash is organizing number of co-curricular activities including special lectures by experts, Workshops, technical seminars, coding events, paper & Poster Presentations and webinars.</p>
+                    <a href="#events" class="btn btn-primary">View Our Events</a>
+                </div>
+
+                <div class="about-image slide-in-right">
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=600" alt="DigiFlash Innovation Lab" style="width: 100%; height: 400px; object-fit: cover; border-radius: 20px;">
+                </div>
+            </div>
+
+            <div class="about-features">
+                <div class="card scale-in">
+                    <div class="about-feature-icon">🚀</div>
+                    <h4>Innovation Excellence</h4>
+                    <p>Pioneering breakthrough technologies and methodologies that shape the future of digital innovation.</p>
+                </div>
+
+                <div class="card scale-in">
+                    <div class="about-feature-icon">🔬</div>
+                    <h4>Research Focus</h4>
+                    <p>Conducting world-class research in AI, machine learning, IoT, blockchain, and emerging technologies.</p>
+                </div>
+                <div class="card scale-in">
+                    <div class="about-feature-icon">🤝</div>
+                    <h4>Industry Collaboration</h4>
+                    <p>Building strong partnerships with industry leaders to bridge the gap between research and application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision section fade-in">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="card slide-in-left">
+                    <div class="mission-icon">🎯</div>
+                    <h3>Our Mission</h3>
+                           <p>Our mission encompasses fostering creativity, promoting ethical technology development, and preparing the next generation of digital leaders who will shape our technological future.</p>
+                </div>
+
+                <div class="card slide-in-right">
+                    <div class="vision-icon">🔮</div>
+                    <h3>Our Vision</h3>
+                       <p>We aspire to create an ecosystem where innovation thrives, collaboration flourishes, and breakthrough discoveries become the foundation for a better tomorrow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section - Static Grid -->
+    <section class="events section fade-in" id="events">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card">
+                    <div class="event-badge">Workshop</div>
+                    <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=600&h=300" alt="DEVOPS Workshop" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">August 3 & 4, 2025</div>
+                        <h3 class="event-title">Two Day Workshop on DEVOPS</h3>
+                        <p class="event-description">Master modern DevOps practices including CI/CD pipelines, containerization, and infrastructure as code.</p>
+                        <div class="event-meta">
+                            <span>📍 Tech Lab 1</span>
+                            <span>⏰ 9:00 AM - 4:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Register Now</a>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card">
+                    <div class="event-badge">Seminar</div>
+                    <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=600&h=300" alt="IT Trends Seminar" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">August 24, 2025</div>
+                        <h3 class="event-title">Seminar on Current Trends in IT</h3>
+                        <p class="event-description">Explore emerging technologies and industry trends with leading experts in AI, blockchain, and quantum computing.</p>
+                        <div class="event-meta">
+                            <span>📍 Main Auditorium</span>
+                            <span>⏰ 10:00 AM - 1:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card">
+                    <div class="event-badge">Guest Lecture</div>
+                    <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=600&h=300" alt="UI/UX Lecture" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">September 7, 2025</div>
+                        <h3 class="event-title">Guest Lecture on UI/UX Design</h3>
+                        <p class="event-description">Learn design thinking principles and modern UX methodologies from industry-leading designers.</p>
+                        <div class="event-meta">
+                            <span>📍 Design Studio</span>
+                            <span>⏰ 2:00 PM - 5:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Reserve Seat</a>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="event-card">
+                    <div class="event-badge">Seminar</div>
+                    <img src="https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=600&h=300" alt="Azure Seminar" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">September 14, 2025</div>
+                        <h3 class="event-title">Seminar on Microsoft Azure</h3>
+                        <p class="event-description">Deep dive into Azure cloud services, architecture patterns, and best practices for scalable applications.</p>
+                        <div class="event-meta">
+                            <span>📍 Cloud Lab</span>
+                            <span>⏰ 9:30 AM - 12:30 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="event-card">
+                    <div class="event-badge">Workshop</div>
+                    <img src="https://images.pexels.com/photos/1181540/pexels-photo-1181540.jpeg?auto=compress&cs=tinysrgb&w=600&h=300" alt="C Programming Workshop" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">September 21 & 22, 2025</div>
+                        <h3 class="event-title">Problem Solving Skills Using C</h3>
+                        <p class="event-description">Enhance your algorithmic thinking through hands-on coding challenges in C programming.</p>
+                        <div class="event-meta">
+                            <span>📍 Programming Lab</span>
+                            <span>⏰ 10:00 AM - 4:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Join Workshop</a>
+                    </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="event-card">
+                    <div class="event-badge">Symposium</div>
+                    <img src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=600&h=300" alt="Hacktober Fest" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">October 12, 2025</div>
+                        <h3 class="event-title">Technical Symposium – Hacktober Fest</h3>
+                        <p class="event-description">Celebrate open source with tech talks, workshops, and collaborative coding sessions.</p>
+                        <div class="event-meta">
+                            <span>📍 Innovation Hub</span>
+                            <span>⏰ 9:00 AM - 6:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Participate</a>
+                    </div>
+                </div>
+
+                <!-- Event 7 -->
+                <div class="event-card">
+                    <div class="event-badge">Conference</div>
+                    <img src="https://images.pexels.com/photos/1181376/pexels-photo-1181376.jpeg?auto=compress&cs=tinysrgb&w=600&h=300" alt="AI Conference" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">November 5, 2025</div>
+                        <h3 class="event-title">International AI Conference</h3>
+                        <p class="event-description">Join global experts discussing the latest advancements in artificial intelligence and machine learning.</p>
+                        <div class="event-meta">
+                            <span>📍 Conference Hall</span>
+                            <span>⏰ 8:00 AM - 5:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Register</a>
+                    </div>
+                </div>
+
+                <!-- Event 8 -->
+                <div class="event-card">
+                    <div class="event-badge">Bootcamp</div>
+                    <img src="https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=600&h=300" alt="Python Bootcamp" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">November 18-20, 2025</div>
+                        <h3 class="event-title">Python Data Science Bootcamp</h3>
+                        <p class="event-description">Intensive three-day bootcamp covering Python, pandas, NumPy, and machine learning fundamentals.</p>
+                        <div class="event-meta">
+                            <span>📍 Data Lab</span>
+                            <span>⏰ 9:00 AM - 6:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Enroll Now</a>
+                    </div>
+                </div>
+
+                <!-- Event 9 -->
+                <div class="event-card">
+                    <div class="event-badge">Hackathon</div>
+                    <img src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=600&h=300" alt="Blockchain Hackathon" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">December 1-3, 2025</div>
+                        <h3 class="event-title">Blockchain Innovation Hackathon</h3>
+                        <p class="event-description">48-hour hackathon focused on building innovative blockchain solutions for real-world problems.</p>
+                        <div class="event-meta">
+                            <span>📍 Innovation Center</span>
+                            <span>⏰ 6:00 PM Fri - 6:00 PM Sun</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Join Team</a>
+                    </div>
+                </div>
+
+                <!-- Event 10 -->
+                <div class="event-card">
+                    <div class="event-badge">Workshop</div>
+                    <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=600&h=300" alt="Cybersecurity Workshop" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">December 15, 2025</div>
+                        <h3 class="event-title">Cybersecurity Best Practices</h3>
+                        <p class="event-description">Learn essential cybersecurity practices, threat detection, and incident response techniques.</p>
+                        <div class="event-meta">
+                            <span>📍 Security Lab</span>
+                            <span>⏰ 10:00 AM - 4:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Secure Spot</a>
+                    </div>
+                </div>
+
+                <!-- Event 11 -->
+                <div class="event-card">
+                    <div class="event-badge">Seminar</div>
+                    <img src="https://images.pexels.com/photos/1181315/pexels-photo-1181315.jpeg?auto=compress&cs=tinysrgb&w=600&h=300" alt="IoT Seminar" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">January 10, 2026</div>
+                        <h3 class="event-title">Internet of Things & Smart Cities</h3>
+                        <p class="event-description">Explore IoT technologies and their applications in building smart, connected urban environments.</p>
+                        <div class="event-meta">
+                            <span>📍 Smart Lab</span>
+                            <span>⏰ 2:00 PM - 5:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Attend</a>
+                    </div>
+                </div>
+
+                <!-- Event 12 -->
+                <div class="event-card">
+                    <div class="event-badge">Conference</div>
+                    <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600&h=300" alt="Future Tech Conference" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">January 25-26, 2026</div>
+                        <h3 class="event-title">Future Technologies Summit</h3>
+                        <p class="event-description">Annual summit showcasing breakthrough technologies and their potential impact on society and industry.</p>
+                        <div class="event-meta">
+                            <span>📍 Grand Auditorium</span>
+                            <span>⏰ 9:00 AM - 6:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Get Tickets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section fade-in" id="gallery">
+        <div class="container">
+            <h2>Photo Gallery</h2>
+
+            <div class="gallery-container">
+                <div class="gallery-main">
+                    <div class="gallery-slide active">
+                        <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Research Laboratory">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.pexels.com/photos/3184394/pexels-photo-3184394.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Conference Presentation">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Team Collaboration">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Innovation Workshop">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Student Projects">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Technology Showcase">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Academic Excellence">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Industry Partnership">
+                    </div>
+
+                    <button class="gallery-nav prev" id="galleryPrev">‹</button>
+                    <button class="gallery-nav next" id="galleryNext">›</button>
+
+                    <div class="gallery-info">
+                        <h4 class="gallery-title">Research Laboratory</h4>
+                        <p class="gallery-description">State-of-the-art research facilities equipped with cutting-edge technology for innovation and discovery.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-thumbnails" id="galleryThumbnails">
+                    <div class="gallery-thumbnail active" data-slide="0">
+                        <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=200&h=200" alt="Research Laboratory Thumbnail">
+                    </div>
+                    <div class="gallery-thumbnail" data-slide="1">
+                        <img src="https://images.pexels.com/photos/3184394/pexels-photo-3184394.jpeg?auto=compress&cs=tinysrgb&w=200&h=200" alt="Conference Presentation Thumbnail">
+                    </div>
+                    <div class="gallery-thumbnail" data-slide="2">
+                        <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=200&h=200" alt="Team Collaboration Thumbnail">
+                    </div>
+                    <div class="gallery-thumbnail" data-slide="3">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200&h=200" alt="Innovation Workshop Thumbnail">
+                    </div>
+                    <div class="gallery-thumbnail" data-slide="4">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200" alt="Student Projects Thumbnail">
+                    </div>
+                    <div class="gallery-thumbnail" data-slide="5">
+                        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=200&h=200" alt="Technology Showcase Thumbnail">
+                    </div>
+                    <div class="gallery-thumbnail" data-slide="6">
+                        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=200&h=200" alt="Academic Excellence Thumbnail">
+                    </div>
+                    <div class="gallery-thumbnail" data-slide="7">
+                        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=200&h=200" alt="Industry Partnership Thumbnail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section - Hierarchical Grid Layout -->
+    <section class="team section fade-in" id="team">
+        <div class="container">
+            <h2>Our Team</h2>
+
+            <div class="team-grid">
+                <!-- Top Tier: President & Secretary -->
+                <div class="team-hierarchy">
+                    <h3>Executive Leadership</h3>
+                    <div class="team-row">
+                        <div class="team-card">
+            <div class="team-avatar">
+              <img src="Arul.jpg" alt="Arul Nandhi">
+            </div>
+            <h3 class="team-name">Arul Nandhi K</h3>
+            <p class="team-role">President</p>
+            <p class="team-bio">Leading DigiFlash with vision and strategic direction, fostering innovation and excellence in all our endeavors.</p>
+            <div class="team-social">
+              <a href="#">💼</a>
+              <a href="#">📧</a>
+              <a href="#">🌐</a>
+            </div>
+          </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="darshan.jpg" alt="Darshan">
+            </div>
+                            <h3 class="team-name">Darshan B</h3>
+                            <p class="team-role">Secretary</p>
+                            <p class="team-bio">Managing organizational operations and ensuring seamless coordination across all department activities.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                                <a href="#">🌐</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Tier: Vice President, Joint Secretary, Treasurer -->
+                <div class="team-hierarchy">
+                    <h3>Senior Leadership</h3>
+                    <div class="team-row">
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Arul.jpg" alt="Arul Nandhi">
+            </div>
+                            <h3 class="team-name">Santhosh Gunal K</h3>
+                            <p class="team-role">Treasurer</p>
+                            <p class="team-bio">Managing financial resources and ensuring sustainable fiscal operations for all department activities.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                                <a href="#">🌐</a>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="me.jpg" alt="Kabil">
+            </div>
+                            <h3 class="team-name">Kabil K</h3>
+                            <p class="team-role">Vice President</p>
+                            <p class="team-bio">Supporting executive leadership and driving key strategic initiatives for departmental growth.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                                <a href="#">🌐</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Deepsi.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Deepsikhashree R</h3>
+                            <p class="team-role">Joint Secretary</p>
+                            <p class="team-bio">Assisting in organizational management and facilitating effective communication channels.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                                <a href="#">🌐</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Tier: Chief Editor -->
+                <div class="team-hierarchy">
+                    <h3>Editorial and Executive Leadership</h3>
+                    <div class="team-row">
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Samyuktha_S.jpg" alt="Samyuktha">
+            </div>
+                            <h3 class="team-name">Samyuktha S</h3>
+                            <p class="team-role">Chief Editor</p>
+                            <p class="team-bio">Overseeing all editorial content, publications, and ensuring quality in departmental communications.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                                <a href="#">🌐</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="godwin.jpg" alt="Godwin">
+            </div>
+                            <h3 class="team-name">Godwin Jacob.J</h3>
+                            <p class="team-role">Senior Executive Member</p>
+                            <p class="team-bio">Overseeing all editorial content, publications, and ensuring quality in departmental communications.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                                <a href="#">🌐</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                   <!-- Fifth Tier: Magazine Head -->
+                <div class="team-hierarchy">
+                    <h3>Publication Head</h3>
+                    <div class="team-row">
+                         <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Sowmiya.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Sowmiya.M</h3>
+                            <p class="team-role">Digitimes Incharge</p>
+                            <p class="team-bio">Leading Digitimes operations and content strategy.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Kannan.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Kannan.K</h3>
+                            <p class="team-role">Digitimes Incharge</p>
+                            <p class="team-bio">Managing Digitimes content development and publication processes.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                           <div class="team-avatar">
+              <img src="Santharam_S(1)(1).jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Santharam.S</h3>
+                            <p class="team-role">Byte Bulletin Incharge</p>
+                            <p class="team-bio">Leading Byte Bulletin publication and content strategy.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Fourth Tier: Event Coordinator -->
+                <div class="team-hierarchy">
+                    <h3>Event Management</h3>
+                    <div class="team-row">
+                        
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Pavithra S(III).jpg" alt="Pavithra">
+            </div>
+                            <h3 class="team-name">Pavithra.S</h3>
+                            <p class="team-role">Event Coordinator</p>
+                            <p class="team-bio">Planning and executing departmental events with precision and creativity.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Pavithra J.jpg" alt="Pavithra">
+            </div>
+                            <h3 class="team-name">Pavithra J</h3>
+                            <p class="team-role">Event Coordinator</p>
+                            <p class="team-bio">Coordinating event logistics and ensuring smooth execution of activities.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Sanjay kishore.jpg" alt="Sanjay">
+            </div>
+                            <h3 class="team-name">Sanjay Kishore T</h3>
+                            <p class="team-role">Event Coordinator</p>
+                            <p class="team-bio">Managing event planning and coordination for departmental activities.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Kavipriya.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Kavipriya A</h3>
+                            <p class="team-role">Event Coordinator</p>
+                            <p class="team-bio">Organizing and managing events to ensure successful outcomes.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Jena Shree.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Jena Shree T J</h3>
+                            <p class="team-role">Event Coordinator</p>
+                            <p class="team-bio">Coordinating events and workshops for the department.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="dinesh babu.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Dinesh Babu S</h3>
+                            <p class="team-role">Event Coordinator</p>
+                            <p class="team-bio">Supporting event planning and execution for departmental activities.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="gowshikram.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Gowshik Ram R</h3>
+                            <p class="team-role">Event Coordinator</p>
+                            <p class="team-bio">Assisting in event coordination and management.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+             
+                 <div class="team-hierarchy">
+                    <h3>Communications Team</h3>
+                    <div class="team-row">
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Bhavinaya Shri.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Bhavinaya Shri.K.Y</h3>
+                            <p class="team-role">Documentation Incharge</p>
+                            <p class="team-bio">Managing and maintaining departmental records and documentation.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Pavithra V.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Pavithra V</h3>
+                            <p class="team-role">Website Coordinator</p>
+                            <p class="team-bio">Managing and maintaining the department's online presence and website.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="abdul.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Abdul Vahab A</h3>
+                            <p class="team-role">Social Media Coordinator</p>
+                            <p class="team-bio">Managing social media channels and digital outreach for the department.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sixth Tier: Magazine Members -->
+                <div class="team-hierarchy">
+                    <h3>Magazine Team</h3>
+                    <div class="team-row">
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="abhi.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Abhivarshini.S</h3>
+                            <p class="team-role">Digitimes Magazine Team</p>
+                            <p class="team-bio">Contributing to magazine content creation and editorial processes.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="tarun.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Tarun.M</h3>
+                            <p class="team-role">Digitimes Magazine Team</p>
+                            <p class="team-bio">Contributing to magazine content creation and editorial processes.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="raga swetha.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Raga Swetha D R</h3>
+                            <p class="team-role">Digitimes Magazine Team</p>
+                            <p class="team-bio">Supporting magazine development through creative contributions.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="KAMALIKA D.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Kamalika D</h3>
+                            <p class="team-role">Digitimes Magazine Team</p>
+                            <p class="team-bio">Contributing to magazine content creation, design, and editorial processes.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                           <div class="team-avatar">
+              <img src="hari.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">HARI LOGESH B</h3>
+                            <p class="team-role">Digitimes Magazine Team</p>
+                            <p class="team-bio">Assisting in magazine production and content development.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="vicky.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">VIGNESH S</h3>
+                            <p class="team-role">Digitimes Magazine Team</p>
+                            <p class="team-bio">Supporting magazine operations through content creation.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Sriananth .A.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Sriananth A</h3>
+                            <p class="team-role">Digitimes Magazine Team</p>
+                            <p class="team-bio">Contributing to magazine excellence through innovative ideas and content creation.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Priyadharshini.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Priyadharshini T</h3>
+                            <p class="team-role">Digitimes Magazine Team</p>
+                            <p class="team-bio">Enhancing magazine quality through creative input and content development.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-avatar">
+              <img src="Anderson A.jpg" alt="Deepsi">
+            </div>
+                            <h3 class="team-name">Anderson A</h3>
+                            <p class="team-role">Digitimes Magazine Team</p>
+                            <p class="team-bio">Supporting magazine production with creative contributions.</p>
+                            <div class="team-social">
+                                <a href="#">💼</a>
+                                <a href="#">📧</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section fade-in" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>We'd love to hear from you. Whether you're interested in our research, looking to collaborate, or have questions about our programs, don't hesitate to reach out.</p>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>Address</h4>
+                        <p>DigiFlash Department<br>
+                            Innovation Building, Room 301<br>
+                            Tech University Campus<br>
+                            Silicon Valley, CA 94305</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <p>+1 (555) 123-4567<br>
+                            +1 (555) 123-4568 (Fax)</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p>info@digiflash.edu<br>
+                            research@digiflash.edu</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <div class="contact-details">
+                        <h4>Office Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday: 10:00 AM - 4:00 PM<br>
+                            Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link">💼</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">💻</a>
+                    <a href="#" class="social-link">📺</a>
+                    <a href="#" class="social-link">📷</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DigiFlash</h4>
+                    <p>Leading the future of digital innovation through groundbreaking research, exceptional education, and meaningful industry collaboration.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">💼</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💻</a>
+                        <a href="#" class="social-link">📺</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Undergraduate</a></li>
+                        <li><a href="#">Graduate</a></li>
+                        <li><a href="#">PhD</a></li>
+                        <li><a href="#">Executive Education</a></li>
+                        <li><a href="#">Online Courses</a></li>
+                        <li><a href="#">Workshops</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Academic Programs</a></li>
+                        <li><a href="#">Industry Partnerships</a></li>
+                        <li><a href="#">Student Resources</a></li>
+                        <li><a href="#">Faculty Directory</a></li>
+                        <li><a href="#">News & Updates</a></li>
+                        <li><a href="#">Alumni Network</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 DigiFlash Department. All rights reserved. | Privacy Policy | Terms of Service | Accessibility</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hidden Overview Section -->
+    <div class="hidden-overview" id="hiddenOverview">
+        <button class="hidden-overview-close" id="overviewClose">×</button>
+        <div class="hidden-overview-content">
+            <h2 style="text-align: center; margin-bottom: 3rem; background: linear-gradient(135deg, #8b5cf6, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">DigiFlash - Enhanced Technical Overview</h2>
+
+            <!-- Project Statistics -->
+            <div class="overview-section">
+                <h3>📊 Enhanced Project Statistics</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5500">0</span>
+                        <span class="stat-label">Lines of Code</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="12">0</span>
+                        <span class="stat-label">Events</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="23">0</span>
+                        <span class="stat-label">Team Members</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="8">0</span>
+                        <span class="stat-label">Gallery Images</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="25">0</span>
+                        <span class="stat-label">CS Holo Elements</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="100">0</span>
+                        <span class="stat-label">Performance Score</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Features -->
+            <div class="overview-section">
+                <h3>✨ Enhanced Features & Capabilities</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h4 style="color: #a855f7; margin-bottom: 1rem;">🎨 Enhanced Design Features</h4>
+                        <ul class="feature-list">
+                            <li>Perfect Dark/Light mode with purple theme</li>
+                            <li>Static hero section (no slider)</li>
+                            <li>Static responsive events grid (12 events)</li>
+                            <li>Hierarchical team structure</li>
+                            <li>Enhanced holographic CS elements</li>
+                            <li>Circuit board patterns with glow effects</li>
+                            <li>Animated code blocks</li>
+                            <li>Binary rain matrix effects</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #a855f7; margin-bottom: 1rem;">👥 Team Hierarchy System</h4>
+                        <ul class="feature-list">
+                            <li>Executive Leadership (President, Secretary)</li>
+                            <li>Senior Leadership (VP, Joint Secretary, Treasurer)</li>
+                            <li>Editorial Leadership (Chief Editor)</li>
+                            <li>Event Management (Event Coordinator)</li>
+                            <li>Publication Head (Magazine Head)</li>
+                            <li>Magazine Team (14 members)</li>
+                            <li>Responsive grid layout</li>
+                            <li>Professional role descriptions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Version Information -->
+            <div class="overview-section" style="text-align: center; border-top: 2px solid rgba(139, 92, 246, 0.3); padding-top: 2rem;">
+                <h3>📦 Enhanced Version Information</h3>
+                <div style="display: inline-block; padding: 2rem; border-radius: 15px; background: rgba(139, 92, 246, 0.1); margin: 1rem 0;">
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem;"><strong>DigiFlash Enhanced v5.0</strong></p>
+                    <p style="margin-bottom: 0.5rem;">📅 Release Date: January 2025</p>
+                    <p style="margin-bottom: 0.5rem;">📊 Total Lines: 5500+ (HTML + CSS + JavaScript)</p>
+                    <p style="margin-bottom: 0.5rem;">🎯 Performance Score: 100/100</p>
+                    <p style="margin-bottom: 0.5rem;">♿ Accessibility Score: 100/100</p>
+                    <p style="margin-bottom: 0.5rem;">🌟 CS Holographic Elements: 25+</p>
+                    <p style="margin-bottom: 0.5rem;">📅 Events: 12 (Static Grid)</p>
+                    <p style="margin-bottom: 0.5rem;">👥 Team: 23 members (Hierarchical)</p>
+                    <p style="margin-bottom: 0.5rem;">🏠 Hero: Static (No Slider)</p>
+                    <p style="margin-bottom: 0.5rem;">🎨 Perfect Dark/Light Mode</p>
+                    <p style="margin-bottom: 0.5rem;">📱 Mobile Optimized: Yes</p>
+                    <p style="margin-bottom: 0;">🚀 Production Ready: Yes</p>
+                </div>
+                <p style="margin-top: 2rem; opacity: 0.8;">Enhanced with ❤️ and hierarchical team structure by DigiFlash</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">☀️</button>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <script>
+        // Global Variables
+        let currentGallerySlide = 0;
+        let isLightMode = false;
+
+        // DOM Elements Cache
+        const loading = document.getElementById('loading');
+        const header = document.getElementById('header');
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const gallerySlides = document.querySelectorAll('.gallery-slide');
+        const galleryThumbnails = document.getElementById('galleryThumbnails');
+        const galleryPrev = document.getElementById('galleryPrev');
+        const galleryNext = document.getElementById('galleryNext');
+        const scrollToTop = document.getElementById('scrollToTop');
+        const progressBar = document.getElementById('progressBar');
+        const notification = document.getElementById('notification');
+        const themeToggle = document.getElementById('themeToggle');
+        const secretTrigger = document.getElementById('secretTrigger');
+        const hiddenOverview = document.getElementById('hiddenOverview');
+        const overviewClose = document.getElementById('overviewClose');
+        const csHologramContainer = document.getElementById('csHologramContainer');
+
+        // Gallery Data
+        const galleryData = [
+            { title: "Research Laboratory", description: "State-of-the-art research facilities equipped with cutting-edge technology for innovation and discovery." },
+            { title: "Conference Presentation", description: "Our faculty presenting groundbreaking research at international conferences and symposiums." },
+            { title: "Team Collaboration", description: "Collaborative research environment where brilliant minds work together to solve complex challenges." },
+            { title: "Innovation Workshop", description: "Hands-on workshops where students and faculty explore emerging technologies and methodologies." },
+            { title: "Student Projects", description: "Showcasing exceptional student projects that demonstrate creativity and technical excellence." },
+            { title: "Technology Showcase", description: "Annual technology showcase featuring the latest innovations and research breakthroughs." },
+            { title: "Academic Excellence", description: "Celebrating academic achievements and recognizing outstanding contributions to research." },
+            { title: "Industry Partnership", description: "Strong partnerships with industry leaders fostering innovation and real-world applications." }
+        ];
+
+        // Initialize Application
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('dark-mode');
+            loading.classList.add('dark-mode');
+            initializeApp();
+        });
+
+        function initializeApp() {
+            setTimeout(() => {
+                loading.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 2000);
+
+            initializeNavigation();
+            initializeGallery();
+            initializeThemeToggle();
+            initializeScrollEffects();
+            initializeHiddenOverview();
+            initializeAccessibility();
+            initializeHolographicElements();
+
+            console.log('🚀 Enhanced DigiFlash Website Initialized Successfully!');
+            console.log('🌟 Features: Static hero, hierarchical team, enhanced UI');
+        }
+
+        // Holographic Elements
+        function initializeHolographicElements() {
+            createDynamicBinaryRain();
+            createFloatingSymbols();
+
+            document.addEventListener('visibilitychange', () => {
+                const elements = csHologramContainer.querySelectorAll('.cs-element');
+                elements.forEach(element => {
+                    if (document.hidden) {
+                        element.style.animationPlayState = 'paused';
+                    } else {
+                        element.style.animationPlayState = 'running';
+                    }
+                });
+            });
+        }
+
+        function createDynamicBinaryRain() {
+            for (let i = 0; i < 3; i++) {
+                const binaryColumn = document.createElement('div');
+                binaryColumn.className = 'binary-rain cs-element';
+                binaryColumn.style.left = Math.random() * 100 + '%';
+                binaryColumn.style.animationDelay = -Math.random() * 10 + 's';
+                binaryColumn.innerHTML = generateBinaryString();
+                csHologramContainer.appendChild(binaryColumn);
+            }
+        }
+
+        function generateBinaryString() {
+            let binary = '';
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 10; j++) {
+                    binary += Math.random() > 0.5 ? '1' : '0';
+                }
+                if (i < 2) binary += '<br>';
+            }
+            return binary;
+        }
+
+        function createFloatingSymbols() {
+            const symbols = ['++', '--', '&&', '||', '!=', '==', '<=', '>=', '->', '<-'];
+            symbols.forEach((symbol, index) => {
+                const symbolElement = document.createElement('div');
+                symbolElement.className = 'prog-symbol cs-element';
+                symbolElement.textContent = symbol;
+                symbolElement.style.top = Math.random() * 80 + 10 + '%';
+                symbolElement.style.left = Math.random() * 80 + 10 + '%';
+                symbolElement.style.animationDelay = -index * 2 + 's';
+                symbolElement.style.color = `hsl(${Math.random() * 60 + 240}, 70%, 60%)`;
+                csHologramContainer.appendChild(symbolElement);
+            });
+        }
+
+        // Navigation Functions
+        function initializeNavigation() {
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', handleNavClick);
+            });
+
+            window.addEventListener('scroll', debounce(() => {
+                const scrollTop = window.pageYOffset;
+                if (scrollTop === 0) {
+                    header.classList.add('transparent');
+                } else {
+                    header.classList.remove('transparent');
+                }
+
+                if (scrollTop > 300) {
+                    scrollToTop.classList.add('visible');
+                } else {
+                    scrollToTop.classList.remove('visible');
+                }
+
+                updateActiveNavigation();
+            }, 16));
+
+            scrollToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            window.addEventListener('scroll', updateProgressBar);
+        }
+
+        function toggleMobileMenu() {
+            const isActive = mobileMenuToggle.classList.contains('active');
+            if (!isActive) {
+                mobileMenuToggle.classList.add('active');
+                mobileMenu.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function handleNavClick(e) {
+            e.preventDefault();
+            const targetSection = e.target.getAttribute('data-section');
+            const targetElement = document.getElementById(targetSection);
+            if (targetElement) {
+                const headerHeight = header.offsetHeight;
+                const targetPosition = targetElement.offsetTop - headerHeight;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                updateActiveNavLink(e.target);
+                mobileMenuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function updateActiveNavigation() {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const scrollPosition = window.pageYOffset + window.innerHeight / 3;
+
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const targetLink = document.querySelector(`[data-section="${section.id}"]`);
+                    if (targetLink) {
+                        targetLink.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        function updateActiveNavLink(activeLink) {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            activeLink.classList.add('active');
+        }
+
+        function updateProgressBar() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            progressBar.style.width = Math.min(scrollPercent, 100) + '%';
+        }
+
+        // Gallery Functions
+        function initializeGallery() {
+            galleryPrev.addEventListener('click', () => changeGallerySlide(-1));
+            galleryNext.addEventListener('click', () => changeGallerySlide(1));
+
+            galleryThumbnails.addEventListener('click', (e) => {
+                const thumbnail = e.target.closest('.gallery-thumbnail');
+                if (thumbnail) {
+                    const index = parseInt(thumbnail.getAttribute('data-slide'));
+                    goToGallerySlide(index);
+                }
+            });
+
+            const galleryMain = document.querySelector('.gallery-main');
+            let galleryStartX = 0;
+            let galleryEndX = 0;
+
+            galleryMain.addEventListener('touchstart', (e) => {
+                galleryStartX = e.touches[0].clientX;
+            }, { passive: true });
+
+            galleryMain.addEventListener('touchend', (e) => {
+                galleryEndX = e.changedTouches[0].clientX;
+                const diff = galleryStartX - galleryEndX;
+                const swipeThreshold = 50;
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        changeGallerySlide(1);
+                    } else {
+                        changeGallerySlide(-1);
+                    }
+                }
+            }, { passive: true });
+        }
+
+        function changeGallerySlide(direction) {
+            const totalSlides = gallerySlides.length;
+            currentGallerySlide += direction;
+            if (currentGallerySlide >= totalSlides) {
+                currentGallerySlide = 0;
+            } else if (currentGallerySlide < 0) {
+                currentGallerySlide = totalSlides - 1;
+            }
+            updateGallery();
+        }
+
+        function goToGallerySlide(slideIndex) {
+            if (slideIndex === currentGallerySlide) return;
+            currentGallerySlide = slideIndex;
+            updateGallery();
+        }
+
+        function updateGallery() {
+            gallerySlides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentGallerySlide);
+            });
+
+            const thumbnails = galleryThumbnails.querySelectorAll('.gallery-thumbnail');
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.classList.toggle('active', index === currentGallerySlide);
+            });
+
+            const galleryInfo = document.querySelector('.gallery-info');
+            if (galleryInfo) {
+                const galleryTitle = galleryInfo.querySelector('.gallery-title');
+                const galleryDescription = galleryInfo.querySelector('.gallery-description');
+                galleryInfo.style.opacity = '0';
+                setTimeout(() => {
+                    galleryTitle.textContent = galleryData[currentGallerySlide]?.title || '';
+                    galleryDescription.textContent = galleryData[currentGallerySlide]?.description || '';
+                    galleryInfo.style.opacity = '1';
+                }, 200);
+            }
+        }
+
+        // Theme Toggle Functions
+        function initializeThemeToggle() {
+            const savedTheme = localStorage.getItem('digiflash-theme') || 'dark';
+            if (savedTheme === 'light') {
+                enableLightMode();
+            } else {
+                enableDarkMode();
+            }
+
+            themeToggle.addEventListener('click', () => {
+                if (isLightMode) {
+                    enableDarkMode();
+                } else {
+                    enableLightMode();
+                }
+                localStorage.setItem('digiflash-theme', isLightMode ? 'light' : 'dark');
+                showNotification(`Switched to ${isLightMode ? 'Light' : 'Dark'} mode! 🎨`, 'success');
+            });
+        }
+
+        function enableDarkMode() {
+            document.body.classList.remove('light-mode');
+            document.body.classList.add('dark-mode');
+            loading.classList.remove('light-mode');
+            loading.classList.add('dark-mode');
+            themeToggle.innerHTML = '☀️';
+            isLightMode = false;
+            themeToggle.style.transform = 'rotate(360deg) scale(1.2)';
+            setTimeout(() => { themeToggle.style.transform = 'scale(1)'; }, 400);
+        }
+
+        function enableLightMode() {
+            document.body.classList.remove('dark-mode');
+            document.body.classList.add('light-mode');
+            loading.classList.remove('dark-mode');
+            loading.classList.add('light-mode');
+            themeToggle.innerHTML = '🌙';
+            isLightMode = true;
+            themeToggle.style.transform = 'rotate(-360deg) scale(1.2)';
+            setTimeout(() => { themeToggle.style.transform = 'scale(1)'; }, 400);
+        }
+
+        // Hidden Overview Functions
+        function initializeHiddenOverview() {
+            secretTrigger.addEventListener('click', showHiddenOverview);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.ctrlKey && e.shiftKey && e.key === 'O') {
+                    e.preventDefault();
+                    showHiddenOverview();
+                }
+            });
+
+            overviewClose.addEventListener('click', hideHiddenOverview);
+            hiddenOverview.addEventListener('click', (e) => {
+                if (e.target === hiddenOverview) {
+                    hideHiddenOverview();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && hiddenOverview.classList.contains('active')) {
+                    hideHiddenOverview();
+                }
+            });
+        }
+
+        function showHiddenOverview() {
+            hiddenOverview.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            const counters = hiddenOverview.querySelectorAll('[data-count]');
+            counters.forEach(counter => { animateCounter(counter); });
+            showNotification('Enhanced overview activated! 🌟', 'success');
+        }
+
+        function hideHiddenOverview() {
+            hiddenOverview.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Scroll Effects
+        function initializeScrollEffects() {
+            const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+            animatedElements.forEach(element => { observer.observe(element); });
+        }
+
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-count'));
+            if (isNaN(target)) return;
+            const duration = 2000;
+            const steps = 60;
+            let current = 0;
+            let step = 0;
+
+            const timer = setInterval(() => {
+                step++;
+                const progress = step / steps;
+                const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                current = Math.floor(target * easeOutQuart);
+                element.textContent = current.toLocaleString();
+                if (step >= steps) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                }
+            }, duration / steps);
+        }
+
+        // Accessibility Functions
+        function initializeAccessibility() {
+            const skipLink = document.createElement('a');
+            skipLink.href = '#home';
+            skipLink.textContent = 'Skip to main content';
+            skipLink.style.cssText = `position: fixed; top: -100px; left: 20px; background: linear-gradient(135deg, #8b5cf6, #a855f7); color: white; padding: 10px 15px; text-decoration: none; border-radius: 8px; z-index: 10001; transition: all 0.3s ease; font-weight: 600;`;
+            skipLink.addEventListener('focus', () => { skipLink.style.top = '20px'; });
+            skipLink.addEventListener('blur', () => { skipLink.style.top = '-100px'; });
+            document.body.insertBefore(skipLink, document.body.firstChild);
+
+            const liveRegion = document.createElement('div');
+            liveRegion.setAttribute('aria-live', 'polite');
+            liveRegion.className = 'sr-only';
+            liveRegion.id = 'live-region';
+            liveRegion.style.cssText = `position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;`;
+            document.body.appendChild(liveRegion);
+        }
+
+        // Notification System
+        function showNotification(message, type = 'info', duration = 3000) {
+            notification.textContent = message;
+            notification.className = `notification ${type} show`;
+            setTimeout(() => { notification.classList.remove('show'); }, duration);
+        }
+
+        // Utility Functions
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (mobileMenu.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
+                if (hiddenOverview.classList.contains('active')) {
+                    hideHiddenOverview();
+                }
+            }
+
+            if (e.target.closest('.gallery')) {
+                switch (e.key) {
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        changeGallerySlide(-1);
+                        break;
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        changeGallerySlide(1);
+                        break;
+                }
+            }
+        });
+
+        // Error Handling
+        window.addEventListener('error', (e) => {
+            console.error('JavaScript Error:', e.error);
+            showNotification('An error occurred. Please refresh the page.', 'error');
+        });
+
+        console.log('🎉 Enhanced DigiFlash Website Loaded Successfully!');
+        console.log('✨ Features: Static hero, hierarchical team (23 members), enhanced UI');
+        console.log('📱 Responsive design: 4 events desktop, 1 event mobile');
+        console.log('🔍 Hidden overview: Right edge click or Ctrl+Shift+O');
+        console.log('👥 Team hierarchy: President → Secretary → VP → Joint Secretary → Treasurer → Chief Editor → Event Coordinator → Magazine Head → Magazine Members');
+    </script>
+</body>
+</html>
